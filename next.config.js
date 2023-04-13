@@ -19,6 +19,10 @@ module.exports = {
         source: "/api/movies",//이렇게 들어오면
         destination: `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`,//이렇게 보내지만 표시는 안되게
       },
+      {
+        source: "/api/movies/:id",
+        destination: `https://api.themoviedb.org/3/movie/:id?api_key=${API_KEY}`,
+      },
     ];
   },
 };
