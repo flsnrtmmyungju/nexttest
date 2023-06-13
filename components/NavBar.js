@@ -5,14 +5,15 @@ export default function NavBar() {
   return (
     <nav> 
       <div>
-        <Link href="/" className={router.pathname === "/" ? "active" : ""}>Home</Link>
-        <Link href="/about" className={router.pathname === "/about" ? "active" : ""}>About</Link>
+        <Link href="/" legacyBehavior><span className={router.pathname === "/" ? "active" : "" }>Home</span></Link>
+        <Link href="/about" legacyBehavior><span className={router.pathname === "/about" ? "active" : "" }>About</span></Link>
       </div>
       <style jsx>{`
         nav {
           display: flex;
           gap: 10px;
           flex-direction: column;
+          
           align-items: center;
           padding-top: 20px;
           padding-bottom: 10px;
@@ -24,6 +25,7 @@ export default function NavBar() {
           margin-bottom: 5px;
         }
         nav a {
+          
           font-weight: 600;
           font-size: 18px;
         }
